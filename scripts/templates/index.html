@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Glass defect Image Classification</title>
+	  <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+
+
+</head>
+<body>
+-->
+
+	<h1><span>Glass defect image classification with MobileSSD model</span></h1>
+
+	<form method=POST enctype=multipart/form-data action="{{ url_for('home') }}">
+  <div id =c style="margin-top:35px; ">
+    <p><h3><span style = "color:black">Uploaded image predictions: </span></h3>
+    <p><span style="color:maroon">{{s1}}</span> &nbsp; &nbsp; &nbsp; <span> Probability</span>  <span style="color:red">{{s2}}</span></p>
+      <p><span style="color:maroon">{{s3}}</span> &nbsp; &nbsp; &nbsp;<span>  Probability</span>  <span style="color:red">{{s4}}</span></p>
+      <p><span style="color:maroon">{{s5}}</span>  &nbsp; &nbsp; &nbsp;<span>  Probability</span>  <span style ="color:red">{{s6}}</span></p>
+    </p></div>
+
+  <div id=d, style ="margin-top:55px;">
+  <h2> <span> Want to Try Again ? <span></h2>
+    </div>
+    <div style ="margin-top:15px;">
+      <p><h4><span style="color:black"> Go back to prediction page </span></h4></p>
+    </div>
+ 
+</form>
+{% endblock content %}
+<!--
+</body>
+</html>

@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>Image classification</h1>
+
+    <p>Upload an image and let artificial intelligence classify your image!</p>
+
+    <p>
+    This app is still under developmet phase - Beta version
+    </p>
+
+    <p>Possible labels: Stone, Knot, Metal</p>
+
+    <form action="{{ url_for('account') }}" method="post" enctype="multipart/form-data" >
+    <input type="file" name = photo  accept="image/*" onchange="loadFile(event)">
+    <input class="pure-button pure-button-primary" type="submit" value="Submit">
+    </form>
+{% endblock content %}
