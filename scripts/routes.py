@@ -7,7 +7,7 @@ from flask_login import login_user, current_user, logout_user, login_required
 from flask_uploads import UploadSet, configure_uploads, IMAGES
 import string
 import random
-from azure.storage.blob import BlockBlobService
+
 
 from load import *
 import numpy as np
